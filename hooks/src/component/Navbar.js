@@ -4,24 +4,35 @@ import { Button } from './Button';
 import '../component/Navbar.css';
 
 function Navbar() {
+
     const [click,setClick]=useState(false)
     const [button,setButton]=useState(true)
-   //resize browser show button
-    const showButton=()=>{
-        if(window.innerWidth<=960){
-            setButton(false)
-        }else{
-            setButton(true)
-        }
-    }
-    window.addEventListener('resize', showButton);
+
+   
 
     // handelclick
     const handelClick=()=>{
         setClick(!click)
     }
 
+
     const closeMobileMenu=()=>setClick(false)
+
+
+    //resize browser show button
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+            setButton(false)
+        } else {
+            setButton(true)
+        }
+    }
+
+
+
+    window.addEventListener('resize', showButton);
+
+
   return (
     <>
         <nav className="navbar">
@@ -56,6 +67,7 @@ function Navbar() {
                               Products
                           </Link>
                       </li>
+                      
                       {/* 4 */}
                       <li className="nav-item">
                           <Link to='/sign-up' className='nav-link-mobile' onClick={closeMobileMenu}>
@@ -64,7 +76,7 @@ function Navbar() {
                       </li>
                  </ul>
 
-                  {button && <Button buttonStyle='btn-outline'>SIGN UP</Button>}
+                  {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
 
             </div>
         </nav>
