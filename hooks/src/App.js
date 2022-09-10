@@ -2,7 +2,7 @@
 // import UseRef from './component/UseRef'
 import './App.css';
 import Navbar from './component/Navbar';
-
+import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,Routes ,Switch ,Route
 } from 'react-router-dom'
@@ -21,7 +21,7 @@ function App() {
      <Navbar/>
      <Home/>
         <Routes >
-          <Route exact path='/ 'element={Home} />
+          <Route  path='/ 'element={<Home/>} />
           
         </Routes>
      </Router>
