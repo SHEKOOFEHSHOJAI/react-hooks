@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../src/App.css';
+import Card from '../component/Card';
 import HeroSecrion  from '../component/HeroSecrion';
 
 
@@ -7,7 +8,7 @@ import HeroSecrion  from '../component/HeroSecrion';
  return(
     <>
       <HeroSecrion/>
-    
+       <Card/>
     </>
  )    
 }
