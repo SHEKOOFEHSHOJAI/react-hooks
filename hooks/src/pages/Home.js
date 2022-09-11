@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../src/App.css';
 import Card from '../component/Card';
+import Footer from '../component/Footer';
 import HeroSecrion  from '../component/HeroSecrion';
 
 
@@ -9,6 +10,7 @@ import HeroSecrion  from '../component/HeroSecrion';
     <>
       <HeroSecrion/>
        <Card/>
+       <Footer/>
     </>
  )    
 }
